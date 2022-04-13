@@ -1,0 +1,7 @@
+{
+  "release_name": "spi-engine",
+  "release_version": "4.39.0-382",
+  "dependencies": {
+    "centralize-configuration": "4.40.2-1401"
+  }
+}

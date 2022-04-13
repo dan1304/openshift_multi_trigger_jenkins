@@ -1,0 +1,7 @@
+{
+  "release_name": "external-user",
+  "release_version": "4.40.0-69",
+  "dependencies": {
+    "centralize-configuration": "4.40.2-1401"
+  }
+}
