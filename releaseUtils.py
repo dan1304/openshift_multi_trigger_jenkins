@@ -3,8 +3,6 @@ import json
 from dotenv import load_dotenv
 import os
 
-from jinja2 import environment
-
 load_dotenv(".env")
 JENKINS_URL = os.getenv('JENKINS_URL')
 JENKINS_TOKEN = os.getenv('JENKINS_TOKEN')
@@ -28,13 +26,13 @@ class jenkinsApiTrigger:
     
     def preparePromote(self):
         self.command = f"curl -k -X POST -H \"Authorization: Bearer {JENKINS_TOKEN}\" {JENKINS_URL}{self.app_name}-prepare-promote-to-{self.release_environment}/buildWithParameters --data app_name={self.app_name} --data app_version={self.app_version}"
-        # subprocess.check_output(self.command, shell=True, stderr=subprocess.STDOUT)
+        subprocess.check_output(self.command, shell=True, stderr=subprocess.STDOUT)
         message = f"[TRIGGERED][{self.app_name} {self.app_version}]: {JENKINS_URL}{self.app_name}-prepare-promote-to-{self.release_environment}"
         return message
 
     def promote(self):
         self.command = f"curl -k -X POST -H \"Authorization: Bearer {JENKINS_TOKEN}\" {JENKINS_URL}{self.app_name}-promote-to-{self.release_environment}/buildWithParameters  --data app_name={self.app_name} --data app_version={self.app_version}"
-        # subprocess.check_output(self.command, shell=True, stderr=subprocess.STDOUT)
+        subprocess.check_output(self.command, shell=True, stderr=subprocess.STDOUT)
         message = f"[TRIGGERED][{self.app_name} {self.app_version}]: {JENKINS_URL}{self.app_name}-promote-to-{self.release_environment}"
         return message
 

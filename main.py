@@ -21,11 +21,6 @@ if __name__ == '''__main__''':
     list_to_release = args.release_list_file
     job_type = args.job_type
     env_to_release =  args.env_to_release
-    # print(list_to_release)
-    # print(env_to_release)
-    # print(job_type)
-    # print(job_type=="PreparePromote")
-
     
     # trigger jenkins job 
     release_list = getReleaseList(f'./{list_to_release}')
