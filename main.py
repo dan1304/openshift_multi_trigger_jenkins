@@ -1,5 +1,6 @@
 from releaseUtils import releaseDetails, jenkinsApiTrigger
 import argparse
+
 def getReleaseList(list_to_release):
     release_list = []
     with open(list_to_release, 'r') as f:
@@ -9,9 +10,6 @@ def getReleaseList(list_to_release):
     return release_list
 
 if __name__ == '''__main__''':
-    '''
-    python main.py app_release_list.txt job_type environment 
-    '''
     # get args from command line input
     parser = argparse.ArgumentParser()
     parser.add_argument("release_list_file", help="App list file to release")
@@ -21,7 +19,7 @@ if __name__ == '''__main__''':
     list_to_release = args.release_list_file
     job_type = args.job_type
     env_to_release =  args.env_to_release
-    
+
     # trigger jenkins job 
     release_list = getReleaseList(f'./{list_to_release}')
     for app_name in release_list:
