@@ -1,12 +1,11 @@
-from email import message
 import subprocess
 import json
 from dotenv import load_dotenv
 import os
 
 load_dotenv(".env")
-JENKINS_URL = os.getenv('JENKINS_URL')
-JENKINS_TOKEN = os.getenv('JENKINS_TOKEN')
+JENKINS_URL = os.getenv('OCP_JENKINS_URL')
+JENKINS_TOKEN = os.getenv('OCP_JENKINS_TOKEN')
 
 class releaseDetails:
     def __init__(self, app_name):
