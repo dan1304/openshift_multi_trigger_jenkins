@@ -2,7 +2,7 @@
 ### How it works 
 ```
 - Define app list needs to release in the `release_list_file`
-- Script maps the app release list with `dependencyDocs`
+- Script maps the app release list with json file in `dependencyDocs`
 - Script triggers the pipelines directly in Jenkins with the data get from above steps
 ```
 ### Usage
@@ -24,3 +24,7 @@ optional arguments:
 - To promote app to release1 env
     python main.py release_list_release1 Promote release1
 ```
+
+### Tips
+You can prepare the `.env` file with `shellUtils.sh `
+`# sh shellUtils.sh `
