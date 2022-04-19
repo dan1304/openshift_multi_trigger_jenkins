@@ -1,7 +1,0 @@
-{
-  "release_name": "currency-exchange",
-  "release_version": "4.41.0-19",
-  "dependencies": {
-    "centralize-configuration": "4.41.0-1413"
-  }
-}

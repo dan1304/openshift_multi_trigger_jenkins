@@ -1,7 +1,0 @@
-{
-  "release_name": "system-user",
-  "release_version": "4.40.1-585",
-  "dependencies": {
-    "centralize-configuration": "4.40.2-1401"
-  }
-}

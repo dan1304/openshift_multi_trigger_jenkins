@@ -1,7 +1,0 @@
-{
-  "release_name": "channel-adapter",
-  "release_version": "4.40.0-69",
-  "dependencies": {
-    "centralize-configuration": "4.40.2-1401"
-  }
-}

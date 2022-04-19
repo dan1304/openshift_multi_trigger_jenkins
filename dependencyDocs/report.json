@@ -1,7 +1,0 @@
-{
-  "release_name": "report",
-  "release_version": "4.40.1-1432",
-  "dependencies": {
-    "centralize-configuration": "4.40.1-1397"
-  }
-}
